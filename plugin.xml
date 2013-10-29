@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.orange.labs.plugins.httprequest"
+      version="0.1.0">
+    <name>VideoPlayer</name>
+    <description>This plugin allows to play a video on the native android player</description>
+    <license>Private</license>
+    <keywords>phonegap,video,native,player</keywords>
+ 
+
+    
+    <js-module src="www/VideoPlayer.js" name="VideoPlayer">
+        <clobbers target="window.videoplayer" />
+    </js-module>
+ 
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="HttpRequest">
+                <param name="android-package" value="com.orange.labs.plugins.VideoPlayer"/>
+            </feature>
+        </config-file>
+        <source-file src="src/VideoPlayer.java" target-dir="src/com/orange/labs/plugins" />      
+     </platform>          
+</plugin>
