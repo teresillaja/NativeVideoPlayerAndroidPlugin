@@ -1,5 +1,5 @@
 var videoplayer=  {
-    createEvent: function(json, successCallback, errorCallback) {
+    play: function(json, successCallback, errorCallback) {
         cordova.exec(
             successCallback, // success callback function
             errorCallback, // error callback function
